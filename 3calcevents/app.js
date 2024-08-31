@@ -32,7 +32,7 @@ myEmitter.on('subtract', (firstNum, secondNum, countArgs) => {
 
 myEmitter.on('divide', (firstNum, secondNum, countArgs) => {
     if(secondNum == 0) {
-        console.log('Делитель не может быть равен 0');
+        console.log('Делитель не может быть = 0');
         return;
     }
     if(!isNaN(firstNum+secondNum)) {
