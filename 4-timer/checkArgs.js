@@ -7,15 +7,15 @@ function checkArgs(arr) {
     let check = true;
 
     arr.forEach((item, index) => {
-        const word = item.match(/\D+/)[0];        
+        const word = item.match(/\D+/)[0];
         if(!Boolean(word.match(reg))) {
             console.log(`В аргументе ${index+1} указано ${check}.\nНеобходимо указать корректное значение времени. Например: 'минуты', 'min' или 'm'`);
             check = !check;
         }
     })
     
-    if(check) {        
-        return calcMs(arr)
+    if(check) {
+        return calcMs(arr);
     } return
 }
 

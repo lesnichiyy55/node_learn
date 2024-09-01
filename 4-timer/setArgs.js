@@ -2,7 +2,7 @@ const checkArgs = require('./checkArgs');
 
 function setArgs(arr) {
 
-    let check = true
+    let check = true;
 
     arr.forEach((arg, index) => {
         if(!Boolean(arg.match(/\D/))) {
