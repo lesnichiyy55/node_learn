@@ -15,9 +15,7 @@ if(process.argv[2]) {
 
 const argsObj = setArgs(arr);
 
-
-
-if(argsObj.ms > 0) {
+if(argsObj && argsObj.ms > 0) {
     const firstTime = returnСurrentTime();
    setTimeout(() => {
     console.log(`Таймер был установлен ${firstTime}.\nЗаданная продолжительность: ${argsObj.durration}.\nТаймер отработал ${returnСurrentTime()}`);

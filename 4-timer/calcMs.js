@@ -1,6 +1,6 @@
 const setDurrationString = require('./durration');
 
-function calcMs(arr) {
+function calcMs(arr) {   
     
     let [h, m, s] = [0, 0, 0];
 
