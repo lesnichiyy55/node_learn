@@ -16,4 +16,5 @@ function getСalculation() {
     console.log(`Результат подсчета сalculationFunction = ${count}`);
 }
 
+
 module.exports = {getСalculation};

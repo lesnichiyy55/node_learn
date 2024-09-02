@@ -7,7 +7,7 @@
 function createArrs() {
     let arr = Array.from(Array(300001).keys()).splice(1);
     const count = arr.length / 16;
-    splitArr(arr, count);
+    return splitArr(arr, count);
 }
 
 function splitArr(arr, count) {
