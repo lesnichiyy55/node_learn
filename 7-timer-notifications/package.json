@@ -1,0 +1,16 @@
+{
+  "name": "7-timer-notifications",
+  "version": "1.0.0",
+  "description": "Таймер с библиотекой уведомлений node-notifier",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "node src/checkArgs.js",
+    "notif": "node src/notifucations.js"
+  },
+  "author": "Alexander Kouleshov",
+  "license": "ISC",
+  "dependencies": {
+    "node-notifier": "^10.0.1"
+  }
+}
