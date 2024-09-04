@@ -21,4 +21,16 @@ const printHelp = () => {
 
 };
 
-export {printError, printSuccess, printHelp}
+const printWeather = (weather) => {//humidity
+    console.log(
+        dedent`
+
+         Погода в городе ${weather.name}. На улице ${weather.weather[0].description}:
+
+         Температура - ${Math.round(weather.main.temp*10)/10},
+         Влажность - ${weather.main.humidity} %,
+         Скорость ветра - ${weather.wind.speed}.
+         `)
+}
+
+export {printError, printSuccess, printHelp, printWeather}

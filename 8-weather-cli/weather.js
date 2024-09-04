@@ -1,5 +1,5 @@
 #! /usr/bin/env node
-import {printHelp, printSuccess, printError} from "./services/log-service.js"
+import {printHelp, printSuccess, printError, printWeather} from "./services/log-service.js"
 import {getArgs} from "./helpers/args.js"
 import { saveKeyValue, TOKEN_DICTIONARY } from "./services/storage.service.js";
 import { getWeather } from "./services/api.service.js";
@@ -20,12 +20,27 @@ const saveToken = async (token) => {
      }
 }
 
+const saveCity = async (city) => {
+
+    if(!city.length) {
+        printError("Не указан город")
+        return
+    }
+     try {
+         await saveKeyValue(TOKEN_DICTIONARY.city, city);
+         printSuccess('Город сохранен');
+     } catch (error) {
+        printError(error.message)
+     }
+}
+
 
 const getForcast = async () => {   
 
    try {
-    const weather = await getWeather('moscow');
-    console.log(weather);
+    const weather = await getWeather();
+
+    printWeather(weather);
     
     } catch (error) {
 
@@ -53,6 +68,10 @@ const initCLI = () => {
 
   if(args.t) {
     return saveToken(args.t)
+  }
+
+  if(args.s) {
+    return saveCity(args.s)
   }
 
   getForcast();
