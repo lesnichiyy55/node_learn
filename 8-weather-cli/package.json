@@ -11,5 +11,9 @@
   },
   "author": "Alexander Kouleshov",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "dedent-js": "^1.0.1"
+  }
 }
