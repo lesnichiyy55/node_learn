@@ -2,8 +2,12 @@
   "name": "8-weather-extented",
   "version": "1.0.0",
   "description": "Создать CLI-программу.",
-  "main": "index.js",
-  "scripts": {
+  "main": "weather.js",
+  "type": "module",
+  "bin": {
+    "weather": "weather.js"
+  },
+  "scripts": {    
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Alexander Kouleshov",
