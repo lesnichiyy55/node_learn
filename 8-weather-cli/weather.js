@@ -2,9 +2,7 @@
 import {printHelp, printSuccess, printError, printWeather} from "./services/log-service.js"
 import {getArgs} from "./helpers/args.js"
 import { saveKeyValue, TOKEN_DICTIONARY } from "./services/storage.service.js";
-import { getWeather } from "./services/api.service.js";
-
-//fd01cf0b37669673e4ec99090d9ffcde
+import { getIcon, getWeather } from "./services/api.service.js";
 
 const saveToken = async (token) => {
 
@@ -39,7 +37,7 @@ const getForcast = async () => {
 
    try {
     const weather = await getWeather();
-
+    
     printWeather(weather);
     
     } catch (error) {
